@@ -6,7 +6,6 @@ class ApplicationController < ActionController::Base
   before_action :require_log_in, only: [:welcome]
   
   def welcome
-    redirect_to login_path unless logged_in?
   end
 
   def current_user
