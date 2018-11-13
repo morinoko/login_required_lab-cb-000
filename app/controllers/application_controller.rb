@@ -16,6 +16,8 @@ class ApplicationController < ActionController::Base
     !!current_user
   end
   
+  private
+  
   def require_log_in
     redirect_to login_path unless logged_in?
   end
